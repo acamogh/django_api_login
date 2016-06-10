@@ -18,7 +18,25 @@
     <input type="button" id="signup" value="signup">
 </form>
 <script src ="/static/common/js/src/ajax_helper.js"></script>
-<script src="/static/app/accounts/js/auth.js"></script>
+{#<script src="/static/app/accounts/js/auth.js"></script>#}
+<script>
+$('#signup').on('click', function(){
+    var data = {
+        'first_name' : $('#first_name').val(),
+        'last_name' : $('#last_name').val(),
+        'email' : $('#email').val(),
+        'password' : $('#password').val(),
+        'confirm_password' : $('#confirm_password').val(),
+
+    };
+    ajaxFactory.ajaxHandler('/api/accounts/create_use/','post',data,function(response){
+            console.log(response)
+        });
+
+    console.log(data);
+
+})
+</script>
 
 </body>
 

@@ -23,24 +23,15 @@ $('#signup').on('click', function(){
     var data = {
         'email' : $('#email').val(),
         'password' : $('#password').val()
-    }
+    };
     ajaxFactory.ajaxHandler('/api/accounts/login_user/','post',data,function(response){
             console.log(response)
-        })
+        });
 
     console.log(data);
 
-{#    $.ajax({#}
-{#        'url':'/api/accounts/login_user/',#}
-{#        'method':'post',#}
-{#        'data':JSON.stringify(data),#}
-{#        'dataType': "json",#}
-{#        'success': function(response){#}
-{#            console.log(response)#}
-{#        }#}
-{#    })#}
 })
 </script>
 </body>
-
+i
 </html>
