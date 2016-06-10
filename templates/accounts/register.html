@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+{#<script src="/static/common/js/libs/jquery-2.1.1.min.js"></script>#}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<body>
+<form id="signup_user">
+    <input type="text" id="first_name" placeholder="first name"><br/>
+    <input type="text" id="last_name" placeholder="last name"><br/>
+    <input type="text" id="email" placeholder="email"><br/>
+    <input type="text" id="password" placeholder="password"><br/>
+    <input type="text" id="confirm_password" placeholder="confirm password"><br/>
+    <input type="button" id="signup" value="signup">
+</form>
+<script src ="/static/common/js/src/ajax_helper.js"></script>
+<script src="/static/app/accounts/js/auth.js"></script>
+
+</body>
+
+</html>

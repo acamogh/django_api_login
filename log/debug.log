@@ -1,0 +1,50 @@
+[08/Jun/2016 06:19:04] INFO [gunicorn.error:247] Worker exiting (pid: 12404)
+[08/Jun/2016 06:19:04] INFO [gunicorn.error:247] Worker exiting (pid: 12404)
+[08/Jun/2016 06:34:39] INFO [gunicorn.error:247] Worker exiting (pid: 13033)
+[08/Jun/2016 06:34:39] INFO [gunicorn.error:247] Worker exiting (pid: 13033)
+[08/Jun/2016 06:40:56] INFO [gunicorn.error:247] Worker exiting (pid: 13074)
+[08/Jun/2016 06:40:56] INFO [gunicorn.error:247] Worker exiting (pid: 13074)
+[08/Jun/2016 07:43:32] WARNING [django.request:182] Not Found: /
+[10/Jun/2016 04:35:51] ERROR [django.request:284] Internal Server Error: /api/accounts/login_user/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/app/accounts/views.py", line 106, in login_user
+    email = data.get('email', None)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/rest_framework/request.py", line 359, in __getattribute__
+    six.reraise(info[0], info[1], info[2].tb_next)
+  File "<string>", line 2, in reraise
+AttributeError: 'Request' object has no attribute 'get'
+[10/Jun/2016 05:15:57] ERROR [django.request:284] Internal Server Error: /api/accounts/login_user/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/app/accounts/views.py", line 104, in login_user
+    data = JSONParser().parse(request.data)
+  File "/Users/amoghangadi/cartoon_mango/wedify_new/env/lib/python2.7/site-packages/rest_framework/parsers.py", line 66, in parse
+    data = stream.read().decode(encoding)
+AttributeError: 'dict' object has no attribute 'read'

@@ -1,0 +1,535 @@
+[09/May/2016 08:37:02] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 15, in themes_check
+    return Response(theme_ser.data)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 674, in data
+    ret = super(ListSerializer, self).data
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 614, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 459, in to_representation
+    fields = self._readable_fields
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 353, in _readable_fields
+    field for field in self.fields.values()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 339, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 939, in get_fields
+    field_name, info, model, depth
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 1076, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 1182, in build_unknown_field
+    (field_name, model_class.__name__)
+ImproperlyConfigured: Field name `purchased` is not valid for model `Theme`.
+[09/May/2016 08:51:49] ERROR [django.request:284] Internal Server Error: /check
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 123, in get_response
+    response = middleware_method(request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/middleware/common.py", line 61, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/middleware/common.py", line 80, in should_redirect_with_slash
+    and urlresolvers.is_valid_path('%s/' % request.path_info, urlconf)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 668, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 534, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 376, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 248, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 136, in get_callable
+    (lookup_view, mod_name))
+ViewDoesNotExist: Could not import 'app.themes.views.themes_check'. View does not exist in module app.themes.views.
+[09/May/2016 08:52:20] ERROR [django.request:284] Internal Server Error: /check
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 123, in get_response
+    response = middleware_method(request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/middleware/common.py", line 62, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/middleware/common.py", line 100, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/check/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[09/May/2016 08:52:42] ERROR [django.request:284] Internal Server Error: /check
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 123, in get_response
+    response = middleware_method(request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/middleware/common.py", line 62, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/middleware/common.py", line 100, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/check/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[09/May/2016 08:55:15] WARNING [django.request:182] Not Found: /api/
+[09/May/2016 09:06:41] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 23, in themes_check
+    theme = Theme.objects.create(user=request.user,theme_name=theme_name,slug_theme=slug_name,theme_image=theme_image)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/query.py", line 401, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/base.py", line 708, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/base.py", line 736, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/base.py", line 820, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/base.py", line 859, in _do_insert
+    using=using, raw=raw)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/query.py", line 1039, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 117, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'slug_theme' cannot be null")
+[09/May/2016 09:10:21] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 376, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 248, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 136, in get_callable
+    (lookup_view, mod_name))
+ViewDoesNotExist: Could not import 'app.themes.views.themes_check'. View does not exist in module app.themes.views.
+[09/May/2016 09:11:10] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 31, in themes_check
+    theme.theme_name ='helloooo'
+AttributeError: 'long' object has no attribute 'theme_name'
+[09/May/2016 09:11:29] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 32, in themes_check
+    theme.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+[09/May/2016 09:11:38] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 32, in themes_check
+    theme.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+[09/May/2016 09:15:53] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 37, in themes_check
+    theme = Theme.objects.get(user=request.user,theme_name='helloooo').remove()
+AttributeError: 'Theme' object has no attribute 'remove'
+[09/May/2016 09:16:02] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 37, in themes_check
+    theme = Theme.objects.get(user=request.user,theme_name='helloooo').remove()
+AttributeError: 'Theme' object has no attribute 'remove'
+[09/May/2016 09:16:04] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 37, in themes_check
+    theme = Theme.objects.get(user=request.user,theme_name='helloooo').remove()
+AttributeError: 'Theme' object has no attribute 'remove'
+[09/May/2016 09:16:57] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 37, in themes_check
+    theme = Theme.objects.get(user=request.user,theme_name='helloooo').remove(theme_name='helloooo')
+AttributeError: 'Theme' object has no attribute 'remove'
+[09/May/2016 09:19:34] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 39, in themes_check
+    theme.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+[09/May/2016 09:19:36] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 39, in themes_check
+    theme.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+[09/May/2016 09:59:02] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 16, in themes_check
+    return Response(theme_ser.data)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 674, in data
+    ret = super(ListSerializer, self).data
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 614, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 459, in to_representation
+    fields = self._readable_fields
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 353, in _readable_fields
+    field for field in self.fields.values()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 339, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 939, in get_fields
+    field_name, info, model, depth
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 1076, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 1182, in build_unknown_field
+    (field_name, model_class.__name__)
+ImproperlyConfigured: Field name `country_name` is not valid for model `Theme`.
+[09/May/2016 10:00:46] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 14, in themes_check
+    print (theme_ser.data)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 674, in data
+    ret = super(ListSerializer, self).data
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 614, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 459, in to_representation
+    fields = self._readable_fields
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 353, in _readable_fields
+    field for field in self.fields.values()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 339, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 939, in get_fields
+    field_name, info, model, depth
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 1076, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 1182, in build_unknown_field
+    (field_name, model_class.__name__)
+ImproperlyConfigured: Field name `country_name` is not valid for model `Theme`.
+[09/May/2016 10:06:23] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 14, in themes_check
+    print (theme_ser.data)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 674, in data
+    ret = super(ListSerializer, self).data
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 614, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 459, in to_representation
+    fields = self._readable_fields
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 353, in _readable_fields
+    field for field in self.fields.values()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 339, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 939, in get_fields
+    field_name, info, model, depth
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 1076, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 1182, in build_unknown_field
+    (field_name, model_class.__name__)
+ImproperlyConfigured: Field name `country_name` is not valid for model `Theme`.
+[09/May/2016 10:06:55] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 14, in themes_check
+    print (theme_ser.data)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 674, in data
+    ret = super(ListSerializer, self).data
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 614, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 459, in to_representation
+    fields = self._readable_fields
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 353, in _readable_fields
+    field for field in self.fields.values()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 339, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 939, in get_fields
+    field_name, info, model, depth
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 1076, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 1182, in build_unknown_field
+    (field_name, model_class.__name__)
+ImproperlyConfigured: Field name `country_name` is not valid for model `Theme`.
+[09/May/2016 10:07:39] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 14, in themes_check
+    print (theme_ser.data)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 674, in data
+    ret = super(ListSerializer, self).data
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 614, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/serializers.py", line 472, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/fields.py", line 1653, in to_representation
+    return method(value)
+TypeError: country_name() takes exactly 1 argument (2 given)
+[31/May/2016 06:23:10] WARNING [django.request:182] Not Found: /
+[31/May/2016 06:23:11] WARNING [django.request:182] Not Found: /favicon.ico
+[31/May/2016 06:24:44] WARNING [django.request:182] Not Found: /api/
+[31/May/2016 08:51:22] WARNING [django.request:182] Not Found: /
+[31/May/2016 08:51:22] WARNING [django.request:182] Not Found: /favicon.ico
+[31/May/2016 09:27:26] WARNING [django.request:182] Not Found: /favicon.ico
+[31/May/2016 09:51:16] WARNING [django.request:182] Not Found: /favicon.ico
+[31/May/2016 10:01:19] WARNING [django.request:182] Not Found: /favicon.ico
+[31/May/2016 10:06:28] WARNING [django.request:182] Not Found: /
+[31/May/2016 10:08:26] WARNING [django.request:182] Not Found: /
+[31/May/2016 10:10:48] WARNING [django.request:182] Not Found: /
+[31/May/2016 10:10:56] WARNING [django.request:182] Not Found: /accounts
+[31/May/2016 10:11:27] WARNING [django.request:182] Not Found: /accounts/
+[31/May/2016 10:28:46] ERROR [django.request:284] Internal Server Error: /api/accounts/create_user/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj_old/app/accounts/views.py", line 54, in create_user
+    data = JSONParser().parse(request.data)
+  File "/Users/amoghangadi/cartoon_mango/env/lib/python2.7/site-packages/rest_framework/parsers.py", line 66, in parse
+    data = stream.read().decode(encoding)
+AttributeError: 'QueryDict' object has no attribute 'read'

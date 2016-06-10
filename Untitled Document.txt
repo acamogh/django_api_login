@@ -1,0 +1,77 @@
+Configuration of Nginx
+
+1) Install nginx -> sudo apt-get install nginx 
+
+2) add config file 
+UBUNUTU -> sudo nano /etc/nginx/sites-available/(project name)
+
+MAC-> sudo nano /usr/local/etc/nginx/sites-enabled/creathives
+
+"server {
+  listen 80;
+  server_name test.com;
+  location = /favicon.ico { access_log off; log_not_found off; }
+  location /static/ {
+      alias /Users/Afxal/workspace/test_project/static/;
+  }
+  location / {
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_redirect off;
+      proxy_pass http://127.0.0.1:8000;
+  }
+}
+"
+
+3)add conf site-enabled: /usr/local/etc/nginx
+
+http {
+    include       mime.types;
+    include /usr/local/etc/nginx/sites-enabled/*;
+    default_type  application/octet-stream;
+    
+<---- only for ubuntu ---->
+3)Copy config to sites enable -> sudo ln -s /etc/nginx/sites-available/(project name) /etc/nginx/sites -enabled/
+<-------------------------->
+
+4)Stop Apache server -> sudo service apache2 stop
+
+5) Restart Nginx ->sudo nginx 
+                    sudo service nginx restart
+6) start nginx -> sudo nginx
+
+7) stop nginx -> sudo nginx -s stop
+
+8) reload nginx -> sudo nginx -s reload
+
+--------------------------------------------------------------------------------------------------------
+Installation of Gunicorn
+
+
+1) Install virtualenv 
+2) pip install gunicorn
+3) sudo nano /etc/hosts
+4) Export project path
+
+export PYTHONPATH=(Your project path)
+
+export DJANGO_SETTINGS_MODULE=main.settings.development
+
+5) Restart unicorn
+
+gunicorn --timeout=7200 --bind 127.0.0.1:8000 main.wsgi:application --reload
+
+gunicorn  --bind 127.0.0.1:8000 main.wsgi:application --reload
+
+
+--------------------------------------------------------------------------------------------------------
+
+Installation of mySQL
+
+start sql server -> mysql.server start
+
+1) sudo apt-get install mysql-server
+
+2) To start MuSQL mysql -u root
+
+3) create databases 

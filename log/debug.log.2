@@ -1,0 +1,573 @@
+[09/May/2016 06:15:18] ERROR [django.request:284] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 316, in _populate
+    for name in pattern.reverse_dict:
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in reverse_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/views.py", line 1, in <module>
+    import simplejson
+ImportError: No module named simplejson
+[09/May/2016 06:15:35] ERROR [django.request:284] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 316, in _populate
+    for name in pattern.reverse_dict:
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in reverse_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/views.py", line 1, in <module>
+    import simplejson
+ImportError: No module named simplejson
+[09/May/2016 06:15:37] ERROR [django.request:284] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 316, in _populate
+    for name in pattern.reverse_dict:
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in reverse_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/views.py", line 1, in <module>
+    import simplejson
+ImportError: No module named simplejson
+[09/May/2016 06:15:40] ERROR [django.request:284] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 316, in _populate
+    for name in pattern.reverse_dict:
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in reverse_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/views.py", line 1, in <module>
+    import simplejson
+ImportError: No module named simplejson
+[09/May/2016 06:15:42] ERROR [django.request:284] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 316, in _populate
+    for name in pattern.reverse_dict:
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in reverse_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/views.py", line 1, in <module>
+    import simplejson
+ImportError: No module named simplejson
+[09/May/2016 06:15:43] WARNING [django.request:182] Not Found: /favicon.ico
+[09/May/2016 06:15:59] ERROR [django.request:284] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 316, in _populate
+    for name in pattern.reverse_dict:
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in reverse_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/views.py", line 1, in <module>
+    import simplejson
+ImportError: No module named simplejson
+[09/May/2016 06:16:14] WARNING [django.request:182] Not Found: /
+[09/May/2016 06:16:20] ERROR [django.request:284] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 316, in _populate
+    for name in pattern.reverse_dict:
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in reverse_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/views.py", line 1, in <module>
+    import simplejson
+ImportError: No module named simplejson
+[09/May/2016 06:17:05] ERROR [django.request:284] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 316, in _populate
+    for name in pattern.reverse_dict:
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in reverse_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/views.py", line 1, in <module>
+    import simplejson
+ImportError: No module named simplejson
+[09/May/2016 06:17:28] ERROR [django.request:284] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 316, in _populate
+    for name in pattern.reverse_dict:
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in reverse_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/views.py", line 15, in <module>
+    from rest_framework import status, views
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 98, in <module>
+    class APIView(View):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 103, in APIView
+    authentication_classes = api_settings.DEFAULT_AUTHENTICATION_CLASSES
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/settings.py", line 211, in __getattr__
+    val = perform_import(val, attr)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/settings.py", line 156, in perform_import
+    return [import_from_string(item, setting_name) for item in val]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/settings.py", line 172, in import_from_string
+    raise ImportError(msg)
+ImportError: Could not import 'rest_framework_jwt.authentication.JSONWebTokenAuthentication' for API setting 'DEFAULT_AUTHENTICATION_CLASSES'. ImportError: No module named rest_framework_jwt.authentication.
+[09/May/2016 06:21:01] WARNING [django.request:182] Not Found: /
+[09/May/2016 06:21:02] WARNING [django.request:182] Not Found: /favicon.ico
+[09/May/2016 06:21:06] ERROR [django.request:284] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 316, in _populate
+    for name in pattern.reverse_dict:
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in reverse_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/views.py", line 15, in <module>
+    from rest_framework import status, views
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 98, in <module>
+    class APIView(View):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 103, in APIView
+    authentication_classes = api_settings.DEFAULT_AUTHENTICATION_CLASSES
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/settings.py", line 211, in __getattr__
+    val = perform_import(val, attr)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/settings.py", line 156, in perform_import
+    return [import_from_string(item, setting_name) for item in val]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/settings.py", line 172, in import_from_string
+    raise ImportError(msg)
+ImportError: Could not import 'rest_framework_jwt.authentication.JSONWebTokenAuthentication' for API setting 'DEFAULT_AUTHENTICATION_CLASSES'. ImportError: No module named rest_framework_jwt.authentication.
+[09/May/2016 06:23:16] ERROR [django.request:284] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 316, in _populate
+    for name in pattern.reverse_dict:
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in reverse_dict
+    self._populate()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/views.py", line 26, in <module>
+    from app.accounts.serializers import SignupSerializer, LoginSerializer
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/serializers.py", line 7, in <module>
+    from app.accounts.jwt_helper import get_json_web_token
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/accounts/jwt_helper.py", line 1, in <module>
+    from rest_framework_jwt.settings import api_settings
+ImportError: No module named rest_framework_jwt.settings
+[09/May/2016 06:32:20] ERROR [django.request:284] Internal Server Error: /login/google-oauth2/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/social/apps/django_app/utils.py", line 51, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/social/apps/django_app/views.py", line 19, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/social/actions.py", line 8, in do_auth
+    backend.strategy.clean_partial_pipeline()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/social/strategies/base.py", line 92, in clean_partial_pipeline
+    self.session_pop(name)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/social/strategies/django_strategy.py", line 107, in session_pop
+    return self.session.pop(name, None)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 64, in pop
+    self.modified = self.modified or key in self._session
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 201, in _get_session
+    self._session_cache = self.load()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 33, in load
+    expire_date__gt=timezone.now()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/query.py", line 381, in get
+    num = len(clone)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/query.py", line 240, in __len__
+    self._fetch_all()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'commonproj.django_session' doesn't exist")
+[09/May/2016 06:36:33] WARNING [django.request:182] Not Found: /register/
+[09/May/2016 06:36:41] WARNING [django.request:182] Not Found: /accounts/
+[09/May/2016 07:38:07] ERROR [django.request:284] Internal Server Error: /check/
+Traceback (most recent call last):
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/wedify_mine/env/lib/python2.7/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/amoghangadi/cartoon_mango/commonproj/app/themes/views.py", line 11, in themes_check
+    console.log(request.user)
+NameError: global name 'console' is not defined
